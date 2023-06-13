@@ -2,6 +2,11 @@ const express = require('express')
 const app = express()
 const mailer = require('./services/email_access.js')
 const mongo = require('./services/data_access.js')
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://localhost:3000/'
+}));
 
 app.use(express.json())
 
