@@ -21,7 +21,7 @@ app.get('/api/updateData/:data',(req,res) =>{
 })
 
 app.post('/api/territoryDB',(req,res) =>{
-    mongo.upload_data(req.body.tid)
+    mongo.upload_data(req.body.data)
     res.send('Update sent')
     res.end()
 })
