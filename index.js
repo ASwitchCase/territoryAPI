@@ -8,6 +8,8 @@ app.use(cors({
     origin: 'http://localhost:3000'
 }));
 
+app.use('/cards', express.static(__dirname + '/assets/TerritoryCards'));
+
 app.use(express.json())
 
 app.get('/api/territoryDB',async (req,res) =>{
